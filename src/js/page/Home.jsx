@@ -6,7 +6,10 @@ import '../../styles/home.css';
 const Home = () => {
 	return (
 		<div className='container todo-container'>
-      aa
+      <h1 className='main-title'>
+        todos
+      </h1>
+      
 		</div>
 	);
 };
