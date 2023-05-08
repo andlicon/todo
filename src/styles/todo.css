@@ -79,3 +79,10 @@
   border: none;
   border-bottom: 1px solid lightgrey;
 }
+
+.todo__body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}

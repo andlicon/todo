@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import '../../styles/todo.css';
 // componentes
 import Error from '../component/Error.jsx';
+import Item from '../component/Item.jsx';
 
 const Todo = () => {
   // hooks
@@ -10,10 +11,10 @@ const Todo = () => {
   const [items, setItems] = useState([]);
   const [error, setError] = useState(null);
 
+  // Manejadores
   const handlerChange = (event) => {
     setAdder(event.target.value);
   }
-
   const handlerOnKey = ({code}) => {
     if( code=='Enter' ) anadirItem();
   }
@@ -56,7 +57,18 @@ const Todo = () => {
         />
       </div>
       {/* cuerpo del todo */}
-      <div className='todo__body content-center'></div>
+      <div className='todo__body content-center'>
+        {
+          items.map( (element, index) => {
+            return(
+              <Item 
+                key={index}
+                task={element}
+              />
+            )
+          })
+        }
+      </div>
       {/* estatus del todo */}
       <div className='todo__status'>
         <p className='status'>
