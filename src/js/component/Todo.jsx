@@ -18,6 +18,14 @@ const Todo = () => {
   const handlerOnKey = ({code}) => {
     if( code=='Enter' ) anadirItem();
   }
+  const handlerDelete = index => {
+    const arreglo = items.slice();
+    const newArray = arreglo.filter( (element, i) => {
+      return index!=i;
+    });
+
+    setItems(newArray);
+  }
 
   const generarError = mensaje => {
     setError(mensaje);
@@ -65,7 +73,8 @@ const Todo = () => {
                 key={index}
                 task={element}
                 items={items}
-                setItems={setItems}
+                setItems={ setItems }
+                handler={ handlerDelete }
                 index={index}
               />
             )

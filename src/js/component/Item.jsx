@@ -2,21 +2,12 @@ import React from 'react';
 
 import '../../styles/item.css'
 
-const Item = ({ items, setItems, index, task }) => {
-  
-  const clickHandler = () => {
-    const arreglo = items.slice();
-    const newArray = arreglo.filter( (element, i) => {
-      return index!=i;
-    });
+const Item = ({ index, task, handler }) => {
 
-    setItems(newArray);
-  }
-  
   return (
     <div 
       className='item'
-      onClick={clickHandler}
+      onClick={ () => handler(index) }
     >
       <p className='item-p'>
         {task}
