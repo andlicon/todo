@@ -18,13 +18,20 @@ const Todo = () => {
     if( code=='Enter' ) anadirItem();
   }
 
+  const generarError = mensaje => {
+    setError(mensaje);
+    setTimeout(
+      () => { setError(null);}
+    , 3000);
+  };
+
   const anadirItem = () => {
     if( adder==='' ) {
-      setError('No se puede cargar un item vacío');
+      generarError('No se puede cargar un item vacío');
       return;
     }
     if( items.some( element => element==adder ) ) {
-      setError('No se pueden duplicar las tareas');
+      generarError('No se pueden duplicar las tareas');
       return;
     }
 
