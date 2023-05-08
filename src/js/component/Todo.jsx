@@ -8,8 +8,11 @@ const Todo = () => {
   const cantidadItems = items.length;
   return(
     <div className='todo'>
+      {/* anadir informacion al todo */}
       <div className='todo__adder'></div>
+      {/* cuerpo del todo */}
       <div className='todo__body'></div>
+      {/* estatus del todo */}
       <div className='todo__status'>
         <p className='status'>
           {
