@@ -64,6 +64,9 @@ const Todo = () => {
               <Item 
                 key={index}
                 task={element}
+                items={items}
+                setItems={setItems}
+                index={index}
               />
             )
           })
