@@ -1,0 +1,45 @@
+.todo {
+  /* caja */
+  width: 100%;
+  border: 1px solid lightgray;
+  box-shadow: 0px 0px 3px grey;
+  /* posicion */
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  /* estilo */
+  background-color: white;
+}
+
+.todo::after {
+  content: '';
+  /* caja */
+  width: 98%;
+  height: 7px;
+  border: 1px solid lightgray;
+  border-top: 1px solid transparent;
+  box-shadow: 0px 0px 5px lightgray;
+  /* posicion */
+  position: absolute;
+  bottom: -13px;
+  z-index: 5;
+  /* estilo */
+  background-color: white;
+}
+
+.todo::before {
+  content: '';
+  /* caja */
+  width: 99%;
+  height: 7px;
+  border: 1px solid lightgray;
+  box-shadow: 0px 0px 5px lightgray;
+  border-top: 1px solid transparent;
+  /* posicion */
+  position: absolute;
+  bottom: -7px;
+  z-index: 4;
+  /* estilo */
+  background-color: white;
+}
