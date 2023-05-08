@@ -70,7 +70,24 @@
   padding: 0px 2em;
 }
 
+.todo__adder {
+  padding: 0 2em;
+  position: relative;
+}
+
+.todo__adder::after {
+  content : '';
+  /* caja */
+  width: 100%;
+  /* posicion */
+  position: absolute;
+  bottom: 0;
+  border-bottom: 1px solid lightgrey;
+}
+
 .todo__input {
+  width: 100%;
+  padding: 0;
   font-size: 2em;
 }
 .todo__input:focus {
