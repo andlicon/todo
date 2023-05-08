@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 import '../../styles/todo.css';
+// componentes
+import Error from '../component/Error.jsx';
 
 const Todo = () => {
   // hooks
@@ -61,9 +63,7 @@ const Todo = () => {
       {/* error */}
       {
         error != null
-        && <div className='error'>
-            <p className='error__mensaje'>{error}</p>
-          </div>
+        && <Error mensaje={error} />
       }
     </div>
   );

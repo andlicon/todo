@@ -1,0 +1,24 @@
+.error {
+    /* caja */
+    height: 2em;
+    border-radius: 8px;
+    padding: 1em;
+    /* posicion */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    /* estilo */
+    color: white;
+    background-color: red;
+}
+
+.error__mensaje {
+    margin: 0;
+}
+
+.error--oculto {
+    display: none;
+}
