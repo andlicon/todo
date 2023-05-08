@@ -60,3 +60,22 @@
 .status {
   margin-bottom: 0;
 }
+
+.todo__item {
+  /* caja */
+  width: 100%;
+  height: 3em;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+  padding: 0px 2em;
+}
+
+.todo__input {
+  font-size: 2em;
+}
+.todo__input:focus {
+  /* caja */
+  outline: none;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+}
