@@ -29,9 +29,12 @@ const Todo = () => {
 
   const generarError = mensaje => {
     setError(mensaje);
-    setTimeout(
-      () => { setError(null);}
-    , 3000);
+
+    if(error==null) {
+      setTimeout(
+        () => { setError(null);}
+      , 3000);
+    }
   };
 
   const anadirItem = () => {

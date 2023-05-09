@@ -13,7 +13,7 @@ const Item = ({ index, task, handler }) => {
         className='item-eliminar item-eliminar--oculto '
         onClick={ () => handler(index) }
       >
-        <i class="bi bi-x-lg"></i>
+        <i className="bi bi-x-lg"></i>
       </span>
     </div>
   );
